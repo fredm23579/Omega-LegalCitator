@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "omega-legal-citator"
+version = "0.1.0"
+description = "Seed legal citator focused on citation normalization and provenance"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+  { name = "motta" }
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+omega-legal-citator = "omega_legal_citator.cli.main:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
