@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/citation_audit.schema.json",
+  "title": "CitationAuditReport",
+  "type": "object",
+  "required": ["has_blockers", "findings"],
+  "properties": {
+    "has_blockers": {"type": "boolean"},
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["finding_id", "severity", "category", "message", "blocks_release"],
+        "properties": {
+          "finding_id": {"type": "string"},
+          "severity": {"type": "string"},
+          "category": {"type": "string"},
+          "message": {"type": "string"},
+          "citation": {"type": "string"},
+          "authority_title": {"type": "string"},
+          "expected_citation": {"type": "string"},
+          "blocks_release": {"type": "boolean"}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

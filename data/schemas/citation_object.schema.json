@@ -7,6 +7,8 @@
   "properties": {
     "raw_text": {"type": "string"},
     "normalized_citation": {"type": "string"},
+    "citation_type": {"type": "string"},
+    "verification_status": {"type": "string"},
     "court": {"type": ["string", "null"]},
     "reporter": {"type": ["string", "null"]},
     "authority_title": {"type": ["string", "null"]},
@@ -15,6 +17,9 @@
     "source_url": {"type": ["string", "null"]},
     "retrieved_at": {"type": "string"},
     "confidence": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+    "span_start": {"type": ["integer", "null"], "minimum": 0},
+    "span_end": {"type": ["integer", "null"], "minimum": 0},
+    "proposition_id": {"type": ["string", "null"]},
     "notes": {"type": ["string", "null"]}
   },
   "additionalProperties": false

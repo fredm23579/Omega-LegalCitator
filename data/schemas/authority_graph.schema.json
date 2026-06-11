@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/authority_graph.schema.json",
+  "title": "AuthorityGraph",
+  "type": "object",
+  "required": ["authorities", "links"],
+  "properties": {
+    "authorities": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["authority_id", "normalized_citation", "raw_text", "authority_type", "verification_status"],
+        "properties": {
+          "authority_id": {"type": "string"},
+          "normalized_citation": {"type": "string"},
+          "raw_text": {"type": "string"},
+          "authority_type": {"type": "string"},
+          "verification_status": {"type": "string"},
+          "title": {"type": "string"},
+          "court": {"type": "string"},
+          "reporter": {"type": "string"},
+          "confidence": {"type": "number"},
+          "notes": {"type": "string"},
+          "provenance": {"type": "array", "items": {"type": "object"}}
+        },
+        "additionalProperties": false
+      }
+    },
+    "links": {"type": "array", "items": {"type": "object"}}
+  },
+  "additionalProperties": false
+}
