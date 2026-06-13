@@ -1,2 +1,0 @@
-[console_scripts]
-omega-legal-citator = omega_legal_citator.cli.main:main
